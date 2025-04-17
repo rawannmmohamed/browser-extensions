@@ -46,14 +46,40 @@
   font-style: normal;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  box-sizing: border-box;
+}
+
+#root{
   width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: auto;
+  width: 70%;
   min-height: 100vh;
   font-family: var(--font-primary);
   font-weight: var(--font-regular);
+  background: var(--DarkGradient);
+  color: var(--Neutral0);
+  transition: color 0.3s ease;
+
+  @media (max-width: 470px) {
+    width: 92%;
+  }
 }
 
+body.dark-mode{
+  background: var(--DarkGradient);
+  color: var(--Neutral0);
+}
+
+body.light-mode{
+  background: var(--LightGradient);
+  color: var(--Neutral900);
+}
+
+ 
