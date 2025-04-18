@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Filter />
+      <Filter theme={theme}/>
       <Card />
     </>
   );
