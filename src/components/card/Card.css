@@ -1,0 +1,67 @@
+.cards {
+  margin-top: 1.5rem;
+}
+.card {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 345px;
+  height: 180px;
+  padding: 1rem;
+}
+.card.light {
+  background-color: var(--Neutral0);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 3px 0px;
+}
+.card.dark {
+  background-color: var(--Neutral700);
+  border: 0.5px solid var(--Neutral600);
+}
+.extension {
+  display: flex;
+}
+.extension-logo {
+  margin-right: 0.8rem;
+  height: 50px;
+  width: 50px;
+}
+.name.light {
+  color: var(--Neutral900);
+  font-weight: var(--font-bold);
+}
+.name.dark {
+  color: var(--Neutral0);
+  font-weight: var(--font-bold);
+}
+
+.description {
+  font-size: 13px;
+  margin-top: 0.5rem;
+}
+.description.light {
+  color: var(--Neutral600);
+}
+.description.dark {
+  color: var(--Neutral300);
+}
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+.remove {
+  border-radius: 15px;
+  padding: 0.5rem 0.7rem;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+.remove.light {
+  background-color: var(--Neutral0);
+  border: 1px solid var(--Neutral300);
+  color: var(--Neutral900);
+}
+.remove.dark {
+  background-color: var(--Neutral700);
+  color: var(--Neutral0);
+  border: 1px solid var(--Neutral600);
+}

@@ -1,9 +1,13 @@
-import React, { useState } from "react";
 import "./Filter.css";
 
-const Filter = ({ theme }: { theme: string }) => {
+type FilterProps = {
+  theme: string;
+  filter: string;
+  setFilter: (value: string) => void;
+};
+
+const Filter = ({ theme, filter, setFilter }: FilterProps)=> {
   
-  const [filter, setFilter] = useState("all");
 
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     const value = (e.target as HTMLButtonElement).value;

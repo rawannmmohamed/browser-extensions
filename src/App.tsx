@@ -5,10 +5,13 @@ import Filter from "./components/filter/Filter";
 import Header from "./components/header/Header";
 
 function App() {
+  
   const getInitialTheme = () => {
     return localStorage.getItem("theme") || "dark";
   };
+
   const [theme, setTheme] = useState(getInitialTheme);
+  const [filter, setFilter] = useState<string>("all");
 
   useEffect(() => {
     document.body.className = theme + "-mode";
@@ -22,8 +25,8 @@ function App() {
   return (
     <>
       <Header theme={theme} toggleTheme={toggleTheme} />
-      <Filter theme={theme}/>
-      <Card />
+      <Filter theme={theme} filter={filter} setFilter={setFilter} />
+      <Card theme={theme} filter={filter} />
     </>
   );
 }
