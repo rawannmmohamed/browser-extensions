@@ -25,6 +25,7 @@
   font-weight: var(--font-medium);
 }
 
+
 .filter-button.light {
   background-color: var(--Neutral0);
   color: var(--Neutral900);
@@ -44,4 +45,8 @@
 .filter-button.dark.active {
   background-color: var(--Red700);
   color: var(--Neutral900);
+}
+.filter-button:hover {
+  opacity: 0.8;
+
 }

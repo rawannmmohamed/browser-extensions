@@ -9,7 +9,6 @@ type Extension = {
 };
 
 const Card = ({ filter, theme }: { filter: string; theme: string }) => {
-  
   const [extensions, setExtensions] = useState<Extension[]>([]);
 
   useEffect(() => {
@@ -25,6 +24,10 @@ const Card = ({ filter, theme }: { filter: string; theme: string }) => {
     if (filter === "inactive") return !ext.isActive;
     return true;
   });
+
+  function handleRemove(name: string) {
+    return setExtensions((prev) => prev.filter((ext) => ext.name !== name));
+  }
 
   return (
     <div className="cards">
@@ -44,8 +47,17 @@ const Card = ({ filter, theme }: { filter: string; theme: string }) => {
             </div>
           </div>
           <div className="controls">
-            <button className={`remove ${theme}`}>Remove</button>
-            <button className="switch-mode">switch</button>
+            <button
+              className={`remove ${theme}`}
+              onClick={() => handleRemove(extension.name)}
+            >
+              Remove
+            </button>
+
+            <label className="switch-mode">
+              <input type="checkbox" checked={extension.isActive} />
+              <span className="slider round"></span>
+            </label>
           </div>
         </div>
       ))}
