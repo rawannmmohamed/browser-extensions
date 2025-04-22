@@ -1,5 +1,5 @@
 # Browser extensions manager UI
-
+## Using React.js and Typescript
 ## The challenge
 
 Your users should be able to: 
